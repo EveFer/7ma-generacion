@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S1 HTML</title>
+    <style>
+        h2 {
+            margin-top: 0;
+        }
+        article {
+            margin-left: 10px;
+            background-color: hotpink; 
+            height: 150px;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hola Amigos!!!!</h1>
-    <h2>=n_n=</h2>
+<body style="border: 3px solid red; padding: 20px; max-height: 100vh;">
+    <header style="background-color:aqua; border:2px solid deeppink; padding-bottom: 10px;">
+        <h2>Header</h2>
+        <nav style="background-color:deeppink; margin: 0 10px -2px 10px; height: 50px;"><h2>Nav</h2></nav>
+    </header>
+    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+        <section style="background-color: dodgerblue; padding: 0 10px 25px 0; flex: 0 0 66%; border: 2px solid #000;">
+            <h2>Section</h2>
+            <article><h3>Article</h3></article>
+            <article><h3>Article</h3></article>
+            <article><h3>Article</h3></article>
+        </section>
+        <aside style="background-color:pink; flex: 0 0 31%; border: 2px solid #000;">
+            <h2>Aside</h2>
+        </aside>
+    </div>
+    <footer style="background-color: #ab32bf78; border: 2px solid #3243bff2; margin-top: 15px;">
+        <h2>Footer</h2>
+    </footer>
 </body>
 </html>
