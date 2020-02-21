@@ -1,0 +1,84 @@
+/* Hay dos tipos de elementos:
+-> Elementos de Bloque: 
+    Son aquellos se se apilan uno de bajo de otro,
+    es decir que 1 elemento de este tipo abarca todo el ancho
+    de su contenedor padre, aunque su tamaño visual no lo abarque.
+    Ejemplos de elementos de Bloque son:
+    * header
+    * nav 
+    * p
+    * article
+    * section
+    * footer.
+
+    Para cambiar un elemnto de tipo bloque a un tipo de linea, solo se le debe aplicar la
+    siguiente propiedad 'display: inline-block'
+
+-> Elementos de Linea: 
+    Son aquellos elementos que solo abarcan el tamaño necesario, por lo tanto se colocan uno enfrente
+    de otro.
+    Ejemplos de elementos en Linea son:
+    * span
+    * button
+    * label
+    * select
+    * textarea
+
+Box-sizing: 
+    Permite cambiar la propiedad por default (Que determina el tamaño por con content-box), es decir que
+    si se le agrega un padding se le sumara ese valor al valor del content-box
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: cyan;
+    margin-bottom: 15px;
+    height: 75px;
+    border: 2px solid tomato;
+}
+
+nav {
+    background-color: deeppink;
+    width: 90%;
+    /* margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto 0 auto; */
+    margin: 0 auto;
+    height: 50px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    background-color: slateblue;
+    width: 60%;
+    padding: 0 15px 15px 0;
+    border: 2px solid #000;
+}
+
+article {
+    background-color: sandybrown;
+    margin: 15px 0 15px 15px;
+    height: 150px;
+}
+
+aside {
+    background-color:salmon;
+    width: calc(40% - 20px);
+    border: 2px solid #000;
+}
+
+footer {
+    background-color: thistle;
+    margin-top: 15px;
+    height: 80px;
+    border: 2px solid purple;
+}
+
