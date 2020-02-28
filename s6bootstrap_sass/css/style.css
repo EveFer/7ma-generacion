@@ -1,0 +1,9 @@
+.no-padding [class*="col-"] {
+    padding: 0;
+}
+
+img {
+    margin: auto 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
