@@ -17,14 +17,18 @@ Algorithm
 9.- Reasignar en la variable side1 la conversion de string a entero de la variable side1 que devuelve la funcion parseInt()
 10.- Reasignar en la variable side2 la conversion de string a entero de la variable side1 que devuelve la funcion parseInt()
 11.- Reasignar en la variable side3 la conversion de string a entero de la variable side1 que devuelve la funcion parseInt()
-12.- Asignar el resultado de la operation (side1 + side2 + side3)/2 en la variable semiPerimeter
-13.- Asignar el resultado de la operacion  sqrt(semiPerimeter(semiPerimeter - side1)(semiPerimeter - side2)(semiPerimeter - side3)) en la variable areaResult
-14.- Imprimir el mensaje con el resultado del area "El area del triangulo cuyos lados son side1: ${side1} side2: ${side2} side3: ${side3} es igual a ${areaResult}
-15.- Si side1 es igual a side2 y side3
-16.- Entonces imprimir el mensaje "El triangulo es equilatero"
-17.- De lo conrario si side1 es igual a side2 y diferente a side3
-18.- Entonces imprimir el mensaje "El triangulo es isosceles"
-19.- De lo contrario imprimir el mensaje "El triangulo es escaleno".
+12 .- Verificar si los lados otorgados pueden crearse un triangulo
+        12.1 Si (side1+side2) > side3:
+        12.2 Entonces 
+            12.3.- Asignar el resultado de la operation (side1 + side2 + side3)/2 en la variable semiPerimeter
+            12.4- Asignar el resultado de la operacion  sqrt(semiPerimeter(semiPerimeter - side1)(semiPerimeter - side2)(semiPerimeter - side3)) en la variable areaResult
+            12.5- Imprimir el mensaje con el resultado del area "El area del triangulo cuyos lados son side1: ${side1} side2: ${side2} side3: ${side3} es igual a ${areaResult}
+            12.6- Si side1 es igual a side2 y side3
+            12.7- Entonces imprimir el mensaje "El triangulo es equilatero"
+            12.8- De lo conrario si side1 es igual a side2 y diferente a side3 OR side1 es igual a side3 AND side1 es diferente side2
+            12.9- Entonces imprimir el mensaje "El triangulo es isosceles"
+            12.10- De lo contrario imprimir el mensaje "El triangulo es escaleno".
+        12.11 imprimir el mensaje "No se puede crear un triangulo"
 
 Practice #5
 
@@ -48,43 +52,69 @@ var side3;
 var areaResult;
 var semiPerimeter;
 
-side1 = prompt('Ingrese el lado 1 del triangulo');
-side2 = prompt('Ingrese el lado 2 del triangulo');
-side3 = prompt('Ingrese el lado 3 del triangulo');
+side1 = prompt("Ingrese el lado 1 del triangulo");
+side2 = prompt("Ingrese el lado 2 del triangulo");
+side3 = prompt("Ingrese el lado 3 del triangulo");
 
 side1 = parseInt(side1);
 side2 = parseInt(side2);
 side3 = parseInt(side3);
 
-semiPerimeter = (side1 + side2 + side3)/2;
+addS1S2 = side1 + side2;
+addS1S3 = side1 + side3;
+addS2S3 = side2 + side3
 
-areaResult = (semiPerimeter)*((semiPerimeter - side1)*(semiPerimeter - side2)*(semiPerimeter - side3));
-areaResult = Math.sqrt(areaResult);
+if ((addS1S2 > side3) || (addS1S3 > side2) || (addS2S3 > side1)) {
+  semiPerimeter = (side1 + side2 + side3) / 2;
 
-console.log(`El area del triangulo cuyos lados son side1: ${side1} side2: ${side2} side3: ${side3} es igual a ${areaResult}`);
+  areaResult =
+    semiPerimeter *
+    ((semiPerimeter - side1) *
+      (semiPerimeter - side2) *
+      (semiPerimeter - side3));
+  areaResult = Math.sqrt(areaResult);
 
-if(side1 === side2 && side1 === side3) {
-    console.log('El triangulo es EQUILATERO por que todos sus lados son iguales');
-}else if (side1 === side2 && side1 !== side3) {
-    console.log('El triangulo es ISOSCELES por que dos de sus lados son iguales');
-}else {
-    console.log('El triangulo es ESCALENO por que sus tres lados son diferentes');
-}
+  console.log(
+    `El area del triangulo cuyos lados son side1: ${side1} side2: ${side2} side3: ${side3} es igual a ${areaResult}`
+  );
 
+  if (side1 === side2 && side1 === side3) {
+    console.log(
+      "El triangulo es EQUILATERO por que todos sus lados son iguales"
+    );
+  } else if (
+    (side1 === side2 && side1 !== side3) ||
+    (side3 === side2 && side3 !== side1) ||
+    (side3 === side1 && side3 !== side2)
+  ) {
+    console.log(
+      "El triangulo es ISOSCELES por que dos de sus lados son iguales"
+    );
+  } else {
+    console.log(
+      "El triangulo es ESCALENO por que sus tres lados son diferentes"
+    );
+  }
 
-var angle1;
-var angle2;
-var angle3;
+  var angle1;
+  var angle2;
+  var angle3;
 
-angle1 = Math.acos((angle2**2 + angle3**2 - angle1**2)/(2*(angle2*angle3)));
-angle2 = Math.acos((angle1**2 + angle3**2 - angle2**2)/(2*(angle1*angle3)))
-angle3 = 180 - (angle1 + angle2);
+  angle1 = Math.acos(
+    (angle2 ** 2 + angle3 ** 2 - angle1 ** 2) / (2 * (angle2 * angle3))
+  );
+  angle2 = Math.acos(
+    (angle1 ** 2 + angle3 ** 2 - angle2 ** 2) / (2 * (angle1 * angle3))
+  );
+  angle3 = 180 - (angle1 + angle2);
 
-if (angle1 === 90 || angle2 === 90 || angle3 === 90) {
-    console.log('El triangulo ES un triangulo rectangulo por que uno de sus angulo es igual a 90º');
+  if (angle1 === 90 || angle2 === 90 || angle3 === 90) {
+    console.log(
+      "El triangulo ES un triangulo rectangulo por que uno de sus angulo es igual a 90º"
+    );
+  } else {
+    console.log("El triangulo No es un triangulo rectangulo.");
+  }
 } else {
-    console.log('El triangulo No es un triangulo rectangulo.');
+  console.log("No se puede construir un triangulo");
 }
-
-
-
