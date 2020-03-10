@@ -25,7 +25,7 @@ var otherVariable = "hola mundo";
     concatenar el contenido de cat item con las iniciales  separadas por un punto
     mostrar en consola el resultado
 
-    output = 
+    output = Brenda Gonzales B. G.
 */
 // var initials = ""; // ambito global ya que se utiliza en ambas funciones
 
@@ -173,3 +173,31 @@ const sliceArray = (array, number) => {
 que se solicite al usuario mediante un prompt algún nombre, todos los nombres se 
 deben almacenar en una colección y al finalizar me debe mostrar la lista de nombres, 
 con sus respectivas iniciales*/
+
+var initials = ""; // ambito global ya que se utiliza en ambas funciones
+
+const getInitials = word => (initials += word.charAt(0) + ". ");
+
+// const getInitials = word => {
+//   let initials = "";
+//   initials += word.charAt(0) + ". ";
+//   return initials
+// }
+
+const printNamesInitials = arrayNames => {
+  arrayNames.forEach(name => {
+    let arrayName = name.split(" ");
+    arrayName.forEach(getInitials); // forEach envia por defecto el item si se le pasa una funcion
+    console.log(`${name} ${initials}`);
+    initials = "";
+  });
+};
+
+const namesArray = (count) => {
+  let array = [];
+  for (let i = 0; i < count; i++) {
+    let item = prompt(`Ingresa el nombre completo de persona #${i+1}`);
+    array.push(item);
+  }
+  printNamesInitials(array);
+}
