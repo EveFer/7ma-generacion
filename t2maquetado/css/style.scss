@@ -1,0 +1,12 @@
+.container {
+    border: 3px solid #000;
+    width: 500px;
+    height: 350px;
+    padding: 10px;
+
+    .element {
+        background-color: peru;
+        color: #fff;
+        margin: 10px 0;
+    }
+}
