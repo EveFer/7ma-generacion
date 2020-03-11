@@ -164,7 +164,7 @@ cada uno de los items del array con los caracteres limitados al número ingresad
 
 const sliceArray = (array, number) => {
   array.forEach(item => {
-    newString = item.slice(0, number);
+    let newString = item.slice(0, number);
     console.log(newString);
   });
 };
@@ -193,11 +193,23 @@ const printNamesInitials = arrayNames => {
   });
 };
 
-const namesArray = (count) => {
+const namesArray = count => {
   let array = [];
   for (let i = 0; i < count; i++) {
-    let item = prompt(`Ingresa el nombre completo de persona #${i+1}`);
+    let item = prompt(`Ingresa el nombre completo de persona #${i + 1}`);
     array.push(item);
   }
   printNamesInitials(array);
-}
+};
+
+/*
+scope -> es el alcance
+Cual de las
+que es mejor practica en un ambito local
+
+let -> no se puede reasignar, redeclarar
+var -> 
+
+declarar es reservar un espacio en memoria
+y definir es asignar un valor al espacio en memoria
+*/
