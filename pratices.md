@@ -56,7 +56,10 @@ esto lo deben de lograr con el menor css posible
 
 ![Layout #4](./img/desktop-preview.jpg)
 
+## Practice #7 - Taller-Maquetado
+- Realizar el maquetado de una landing Page - Taller
 
+![Layout #4](./img/desktop-preview_taller.jpg)
 
 # JavaScript
 
