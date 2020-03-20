@@ -130,3 +130,16 @@ const newSnacks = () => {
     }
     createSnacks(bookSnack)
 }
+
+
+function Artista(type, name, gender, age) {
+  this.type = type,
+  this.name = name,
+  this.gender = gender,
+  this.age = age,
+  this.presentation = () => {
+    alert(`Hola mi nombre es ${this.name} y tengo ${this.age} años`)
+  }
+}
+
+var artist1 = new Artista("Singer", "Fernanda", "Mujer", "30")
