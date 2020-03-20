@@ -56,6 +56,7 @@ var kodersDb = [{
 3.- Obtener el promedio general de prácticas entregadas
 4.- Obtener el promedio general de asistencias
 5.- En el elemento con el id "practices-container" insertar una fila por cada koder obtenido en el paso 1, debería tener la siguiente estructura:
+
 <tr>
     <td>{número de koder}</td>
     <td>{nombre completo del koder}</td>
@@ -109,12 +110,10 @@ var kodersTotalAssistance = [];
 var avgPractices;
 var avgAssistance;
 
-kodersDeliveredPractices = kodersDb.filter((koder)=>{
-    return koder.deliveredPractices < 10
-});
-kodersTotalAssistance = kodersDb.filter((koder) => {
-    return koder.totalAssistance < 20
-});
+kodersDeliveredPractices = kodersDb.filter(koder=> koder.deliveredPractices < 10);
+
+kodersTotalAssistance = kodersDb.filter(koder => koder.totalAssistance < 20);
+
 console.log(kodersDeliveredPractices);
 console.log(kodersTotalAssistance);
 
@@ -161,29 +160,32 @@ console.log('avg_assistence: ', avgAssistance);
 
 const printKodersInTable = (arr, elementId, cause) => {
     arr.forEach((koder, index) => {
-        var choice;
+        let tagTr = document.createElement('tr');
+        let tagTdNum = document.createElement('td');
+        let tagTdName = document.createElement('td');
+        let tagTdPracticesOAssistence = document.createElement('td');
+        
+        let choice;
         if(cause === 'practices'){
-             const {deliveredPractices} = koder;
+             let {deliveredPractices} = koder;
              choice = `${deliveredPractices}`;
         }else if(cause==="assistances"){
-            const {totalAssistance} = koder;
+            let {totalAssistance} = koder;
             choice = `${totalAssistance}`;
         }
 
-        const {name, lastName} = koder;
-        let numKoder = document.createTextNode(`${index + 1}`);
+        let {name, lastName} = koder;
+        let numKoder = document.createTextNode(index + 1);
         let fullName = document.createTextNode(`${lastName} ${name}`);
         let practicesOrAssistence = document.createTextNode(`${choice}`);
-        let tagTdNum = document.createElement('td');
+        
         tagTdNum.appendChild(numKoder);
-        let tagTdName = document.createElement('td');
         tagTdName.appendChild(fullName);
-        let tagTdPractices = document.createElement('td');
-        tagTdPractices.appendChild(practicesOrAssistence);
-        let tagTr = document.createElement('tr');
+        tagTdPracticesOAssistence.appendChild(practicesOrAssistence);
+        
         tagTr.appendChild(tagTdNum);
         tagTr.appendChild(tagTdName);
-        tagTr.appendChild(tagTdPractices);
+        tagTr.appendChild(tagTdPracticesOAssistence);
         let elementPracticesContainer = document.getElementById(elementId);
         elementPracticesContainer.appendChild(tagTr);
     });
