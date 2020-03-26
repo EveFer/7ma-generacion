@@ -2,17 +2,19 @@
 
 ## Practice #1
 ### Fecha: Miercoles 19 de Febrero
-- Fecha: Miercoles 19 de Febrero
-crear el HTML correspondiente a la imagen que les acabo de compartir. El html debe contener todos los tags necesarios para crear l
-a estructura mostrada, con las respectivas anidaciones y textos indicando el nombre de la sección ( así como se muestra en la imagen )
+- Crear el HTML correspondiente a la imagen que les acabo de compartir. El html debe contener todos los tags necesarios para crear la estructura mostrada, con las respectivas anidaciones y textos indicando el nombre de la sección ( así como se muestra en la imagen )
 esa es la práctica fundamental, de manera adicional, pueden investigar como funciona el atributo style y con el modificar los tamaños, 
 colores de fondo, proporciones, etc y al terminar, por favor súbanlo a su repositorio
+
+Dado un layout crear el HTML correspondiente con los tags necesarios para la estructura. Ademas agregar los estilos necesarios con el atributo style.
 
 ![Layout #1](./img/html5_basic_page_structure_01.png)
 
 ## Practice #2
 ### Fecha: Jueves 20 de Febrero
-- Hay que hacer el lay-out de la practica #1 utilizando css como un archivo externo
+- Hay que hacer el layout de la practica #1 utilizando css como un archivo externo
+
+Dado el layout de la practica #1 agregar los estilos por medio de un archivo externo style.css
 
 ## Practice #3
 ### Fecha: Sabado 22 de Febrero
@@ -20,12 +22,17 @@ colores de fondo, proporciones, etc y al terminar, por favor súbanlo a su repos
 para ello deben formar equipos de 3, crear un repositorio que se llame responsive_landing
 y en él subir los archivos necesarios para crear esta maqueta
 
+Dado un layout desarrollar la maqueta con los diseños (mobile y web). Esto en equipos de 3. Subirlo a un repositorio llamado responsive_landing.
+
+
 ![Layout #1](./img/maqueta_web.png)
 
 
 ## Practice #4
 ### Fecha: Lunes 24 de Febrero
-- Es la practica #3, adicional que todos en el grupo colaborariamos en el repo de Isra.
+- Es la práctica #3, adicional que todos en el grupo colaborariamos en el repo de Isra.
+
+Adicional a la práctica #3 todo el grupo colaboramos para subirlo un solo repositorio.
 
 
 ## Practice #5
@@ -39,24 +46,30 @@ por lo que debería ser responsivo, para la versión móvil necesitamos que todo
 
 esto lo deben de lograr con el menor css posible
 
+Dado el layout de la práctica #1, implementar los estilos con Bootstrap y además que sea responsivo.
+
 ![Layout #1](./img/html5_basic_page_structure_01.png)
 
 
 ## Practice #6
 ### Fecha: Jueves 27 de Febrero
-- Dado el analisis de un layout con bootstrap. Maquetarlo.
+- Dado el analisis de un layout con bootstrap Maquetarlo.
+
+Dado el analisis de un layout estilarlo con Bootstrap.
 
 ![Layout #3](./img/esquema10_analisis_layout_bootstrap_2.png)
 
-## Practice #6
+## Practice #7
 ### Fecha: Viernes 28 de Febrero
 - Realizar el maquetado de una landing page en equipos de 3 implementado.
     - Bootstrap
     - scss
 
+Dado el diseño de una landing page. Realizar el maquetado implementando Bootstrap y scss. En equipos de 3.
+
 ![Layout #4](./img/desktop-preview.jpg)
 
-## Practice #7 - Taller-Maquetado
+## Practice #8 - Taller-Maquetado
 - Realizar el maquetado de una landing Page - Taller
 
 ![Layout #4](./img/desktop-preview_taller.jpg)
@@ -74,7 +87,7 @@ esto lo deben de lograr con el menor css posible
 
 ## Practice #2
 
-- Tener los valores de x y x, y compararlos
+- Tener los valores de x, y compararlos
     Si x es mayor que y, mostrar un mensaje que lo indique
     si x es menor que y, mostar un mensaje que lo indique
 
@@ -97,19 +110,16 @@ esto lo deben de lograr con el menor css posible
 
 ## STRING METHODS
 ## Practice #1
-- Obtener el nombre completo del usuario e 
-    indicarle cuantos caracteres tiene su nombre
+- Obtener el nombre completo del usuario e indicarle cuantos caracteres tiene su nombre
 ## Practice #2
 - Obtener el nombre completo del usuario y determinar:
     1. cuántos caracteres tiene
     2. si su nombre tiene menos de 15 caracteres, indicarle mediante un mensaje que su nombre es mmuy corto
     si tiene más de 15 caracteres indicarle que su nombre es muy largo
 ## Practice #3
-- obtener el nombre completo del usuario
-    contar cuántas vocales tiene
+- obtener el nombre completo del usuario contar cuántas vocales tiene
 ## Practice #4
-- Recibir una palabra del usuario, y formar una nueva palabra usando las dos primeras y las dos últimas
-    letras de esa palabra. Si la palabra tiene menos de 5 caracteres, enviar un mensaje de error al usuario indicándoselo
+- Recibir una palabra del usuario, y formar una nueva palabra usando las dos primeras y las dos últimas letras de esa palabra. Si la palabra tiene menos de 5 caracteres, enviar un mensaje de error al usuario indicándoselo.
 ## Practice #5
 - Solicitar al usuario nombre y edad, y mostar un mensaje que diga "hola, soy {nombre} y tengo {edad} años"
 ## Practice #6
@@ -119,16 +129,13 @@ esto lo deben de lograr con el menor css posible
 ## ARRAY - FOR - FOREACH
 
 ## Practice #1
-- Pedir al usuario la cantidad de koders a registar
-    pedir tantos nombres de koder como el usuario haya indicado
-    guardar cada nombre de cada koder en una colección
-    de cada Koder imprimir únicamente el primer nombre
+- Pedir al usuario la cantidad de koders a registar, pedir tantos nombres de koder como el usuario haya indicado y guardar cada nombre de cada koder en una colección además por cada Koder imprimir únicamente el primer nombre.
 
 ## FUNCTIONS
 
 ## Practice #1
 - Iterar dentro del array,
-    por cada item, obtener el nonbre de cada bmentor
+    por cada item, obtener el nombre de cada bmentor
     extraer la primer letra de cada palabra del nombre
     concatenar el contenido de cat item con las iniciales  separadas por un punto mostrar en consola el resultado
 
@@ -143,20 +150,21 @@ esto lo deben de lograr con el menor css posible
 ## Practice #3
 - Crear una función que me permita ingresar el nombre de un array, 
     y contar cuántos items tiene, si el array no existe, 
-    debe enviar un prompt que diga "tu array no existe"
+    debe enviar un prompt que diga "El array no existe"
 
 ## Practice #4
-- Crear una función que reciba un array, e imprima los elementos de ese array en orden alfábetico y con la primer palabra en uppercase 
+- Crear una función que reciba un array, e imprima los elementos de ese array en orden alfábetico y con la primer palabra en uppercase. 
 
 ## Practice #5
-- Crear una función que reciba un array, un número, y debe de imprimir 
-    cada uno de los items del array con los caracteres limitados al número ingresado
+- Crear una función que reciba un array, un número, y debe imprimir 
+    cada uno de los items del array con los caracteres limitados al número ingresado.
 
 ## Practice #6
-- Crear una función que reciba una cantidad (número), este número será la cantidad de veces 
-    que se solicite al usuario mediante un prompt algún nombre, todos los nombres se 
-    deben almacenar en una colección y al finalizar me debe mostrar la lista de nombres, 
-    con sus respectivas iniciales
+- Crear una función que reciba una cantidad (número), este número será la cantidad de veces que se solicite al usuario mediante un prompt algún nombre, todos los nombres se deben almacenar en una colección y al finalizar me debe mostrar la lista de nombres, con sus respectivas iniciales.
+
+Crear un funcion que reciba como parametro un numero, dicho número será la
+cantidad de veces que se solicite al usuario mediante un promp algún nombre,
+cada nombre almacenarlo a una colección y además mostrar los nombres con sus iniciales.
 
 ## OBJECTS
 
@@ -174,7 +182,7 @@ esto lo deben de lograr con el menor css posible
 ## Practice #2
 -  crear un libro de recetas de botanas, y después crear una botana por cada receta en nuestro libro
 
-## METHODS ARRAY
+## ARRAY METHODS 
 - Dado un array de objetos de productos:
 ```javascript
 const products = [
@@ -345,6 +353,7 @@ const products = [
     }
   ]
 ```
+Dado un array de objetos de productos:
 ## filter() function
 1. Obtener prodcuts chips and beer
 2. Obtener todos los productos < a $50 y obtener >= $50
@@ -352,11 +361,10 @@ const products = [
 ## map() function
 1. preguntar el preció y si es divisible entre 2 retornar solo descripción sino, regresar el objeto normal
 2. preguntar si el preció es menor a 20 y si lo es agregar la propiedad "ican: true" al objeto
-3. regresar el objeto en formato de string con formato 'tipo - descripción - precio' (el tipo debe venir en español y al precio agregarle $
+3. regresar el objeto en formato de string con formato 'tipo - descripción - precio' (el tipo debe venir en español y al precio agregarle $.
 
 ## reduce() function
-
 1. Obtener la suma de los precios de los productos tipo **beer** const suma1 = suma de los beer
 2. Obtener la suma de los precios de los productos tipo **chip** const 
 3. const beers = un nuevo arreglo, filtrando los objetos de tipo beer, y regresa las descripciones ejemplo: ['Corona Mega']
-4. const chips = un nuevo arreglo, filtrando los objetos de tipo chip, y regresa las descripciones ejemplo: ['Sabritas']
+4. const chips = un nuevo arreglo, filtrando los objetos de tipo chip, y regresa las descripciones ejemplo: ['Sabritas'].
