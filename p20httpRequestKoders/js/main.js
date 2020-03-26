@@ -1,6 +1,6 @@
 const addKoderToDB = (koderObject) => {
     let xHttp = new XMLHttpRequest();
-    xHttp.onreadystatechange = function(){
+    xHttp.onreadystatechange = function(){ /*Esto es una funcion anonima, por que no tiene nombre */
         if(this.readyState == 4 && this.status == 200){
             console.log(JSON.parse(this.responseText));
         }
