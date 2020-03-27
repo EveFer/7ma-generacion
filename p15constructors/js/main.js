@@ -10,6 +10,20 @@ function KoderK(name, lastName, phone, dateBirth) {
   this.lastName = lastName,
   this.phone = phone,
   this.dateBirth = dateBirth;
+  this.getInitials = function() {
+    let initials = '';
+    let fullName = `${this.name} ${this.lastName}`.split(" ");
+    fullName.forEach((word)=> initials += word.charAt(0) + "")
+    return initials
+  }
+  this.getFormatBirth = function() {
+    let birth =this.dateBirth.split("-")
+    let newFormat = `${birth[0]}${birth[1]}${birth[2].slice(-2)}`
+    return newFormat;
+  }
+  this.formatOutput = function() {
+    return `${this.getInitials()}-${this.getFormatBirth()}`
+  }
 }
 
 const createObjects = array => {
